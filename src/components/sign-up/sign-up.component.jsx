@@ -45,6 +45,11 @@ class SignUp extends React.Component {
             });
         } catch (error) {
             console.log(error);
+            if (error.message.includes('email-already-in-use')) {
+                alert(
+                    'This Email is already in use. try to log in or use forgot password'
+                );
+            }
         }
     };
 
